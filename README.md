@@ -6,21 +6,23 @@
 `git clone https://github.com/wwwxmu/hosts_linux.git`
 
 ### hosts所在文件夹：
-Android（安卓）系统hosts位于 /etc/hosts
-Linux系统hosts位于 /etc/hosts
-绝大多数Unix系统都是在 /etc/hosts
+Windows 系统hosts位于 C:\Windows\System32\drivers\etc\hosts
+
+Android（安卓）系统hosts位于 /system/etc/hosts
+
+Mac（苹果电脑）系统hosts跟Linux一样位于 /etc/hosts
+
+iPhone（iOS）系统hosts跟Linux Mac一样位于 /etc/hosts
+
 
 ### 修改hosts后生效的方法：
 
-1 Linux
-终端输入
-`sudo rcnscd restart`
-对于systemd发行版，请使用命令
-`sudo systemctl restart NetworkManager`
-如果不懂请都尝试下
+1 Windows
+开始 -> 运行 -> 输入cmd -> 在CMD窗口输入
+`ipconfig /flushdns`
 
-2 Android
-开启飞行模式 -> 关闭飞行模式
+2 Mac OS X终端输入
+`sudo killall -HUP mDNSResponder`
 
 3 通用方法
 拔网线(断网) -> 插网线(重新连接网络)
